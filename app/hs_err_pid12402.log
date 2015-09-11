@@ -1,0 +1,1303 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f8477d7719f, pid=12402, tid=140206943188736
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_75-b13) (build 1.7.0_75-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.75-b04 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x74519f]  LinkResolver::runtime_resolve_virtual_method(CallInfo&, methodHandle, KlassHandle, Handle, KlassHandle, bool, Thread*)+0xff
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f847000b000):  JavaThread "main" [_thread_in_vm, id=12404, stack(0x00007f8478fb3000,0x00007f84790b4000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x000000b700b60093
+
+Registers:
+RAX=0x000000b700b6006e, RBX=0x00007f847000bc90, RCX=0x00007f847000b000, RDX=0x00007f847000bc98
+RSP=0x00007f84790b1a70, RBP=0x00007f84790b1b30, RSI=0x00000000bb286100, RDI=0x00007f847000bc90
+R8 =0x00007f847000bc68, R9 =0x0000000000000001, R10=0x00000000bb287840, R11=0x0000000000000000
+R12=0x000000000000000f, R13=0x000000b700b6006e, R14=0x00007f84790b1c30, R15=0x00007f84790b1c30
+RIP=0x00007f8477d7719f, EFLAGS=0x0000000000010202, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f84790b1a70)
+0x00007f84790b1a70:   00000000ecd13178 00007f84790b1a78
+0x00007f84790b1a80:   00000000bb161c5b 01007f84790b1ad0
+0x00007f84790b1a90:   00007f847000bc68 00007f847000bc58
+0x00007f84790b1aa0:   00007f847000bc70 0000000000000000
+0x00007f84790b1ab0:   00007f84790b1ae0 00007f84790b1b78
+0x00007f84790b1ac0:   00007f846d089e58 00000000ecd5bb10
+0x00007f84790b1ad0:   00000000ecd4beb8 00000000bb28b798
+0x00007f84790b1ae0:   00007f84790b1b50 00007f846d0061d4
+0x00007f84790b1af0:   0000000000000000 00007f846d0061d4
+0x00007f84790b1b00:   00000000ecd5bb10 00007f847000bc68
+0x00007f84790b1b10:   00000000bb288288 00007f847000b000
+0x00007f84790b1b20:   00007f847000bc40 00007f84790b1c30
+0x00007f84790b1b30:   00007f84790b1bd0 00007f8477d77bc4
+0x00007f84790b1b40:   00007f847000b000 00007f8477f02799
+0x00007f84790b1b50:   00007f847023eff0 00007f847565b5e0
+0x00007f84790b1b60:   00007f847000bc58 00007f847000bc60
+0x00007f84790b1b70:   00007f847000bc70 00007f84790b1dc0
+0x00007f84790b1b80:   00007f847000bc58 00007f8477b4f0c2
+0x00007f84790b1b90:   00007f847000bc60 00007f8477e19479
+0x00007f84790b1ba0:   00007f84790b1cd0 00007f84790b1cd0
+0x00007f84790b1bb0:   00000000bb288288 00007f847000b000
+0x00007f84790b1bc0:   00007f847000bc48 0000000000000000
+0x00007f84790b1bd0:   00007f84790b1e60 00007f8477c2a46f
+0x00007f84790b1be0:   0000000000000000 0000000000000000
+0x00007f84790b1bf0:   0000000000000001 00007f84790b1c30
+0x00007f84790b1c00:   00000000000000b6 00007f847000b830
+0x00007f84790b1c10:   00007f847000b840 00007f847000bc18
+0x00007f84790b1c20:   00000000000003d8 00007f847000bc40
+0x00007f84790b1c30:   0000000000000000 0000000000000000
+0x00007f84790b1c40:   0000000000000000 0000000000000000
+0x00007f84790b1c50:   00000000ead1bd10 0000000000000000
+0x00007f84790b1c60:   0000000000000000 00000000bb25d899 
+
+Instructions: (pc=0x00007f8477d7719f)
+0x00007f8477d7717f:   c7 48 89 fb 4c 89 2f 48 85 db 0f 84 09 05 00 00
+0x00007f8477d7718f:   80 bd 5f ff ff ff 00 0f 84 94 01 00 00 48 8b 03
+0x00007f8477d7719f:   f6 40 25 04 0f 84 87 01 00 00 48 8b 4d 10 48 8b
+0x00007f8477d771af:   99 18 01 00 00 48 8b 48 10 0f b7 51 3a 4c 8b 41 
+
+Register to memory mapping:
+
+RAX=0x000000b700b6006e is an unknown value
+RBX=0x00007f847000bc90 is an unknown value
+RCX=0x00007f847000b000 is a thread
+RDX=0x00007f847000bc98 is an unknown value
+RSP=0x00007f84790b1a70 is pointing into the stack for thread: 0x00007f847000b000
+RBP=0x00007f84790b1b30 is pointing into the stack for thread: 0x00007f847000b000
+RSI=0x00000000bb286100 is an oop
+{constant pool} 
+ - klass: {other class}
+ - holder: 0x00000000bb28b798
+ - cache: 0x00000000bb294b98
+ -   1 :  : klass_index=147 name_and_type_index=384
+ -   2 :  : klass_index=147 name_and_type_index=385
+ -   3 :  : klass_index=147 name_and_type_index=386
+ -   4 :  : klass_index=147 name_and_type_index=387
+ -   5 :  : klass_index=147 name_and_type_index=388
+ -   6 :  : klass_index=148 name_and_type_index=389
+ -   7 :  : 'java/util/BitSet' {0xbaff0b28}
+ -   8 :  : klass_index=391 name_and_type_index=392
+ -   9 :  : klass_index=7 name_and_type_index=393
+ -  10 :  : klass_index=147 name_and_type_index=394
+ -  11 :  : 'com/android/dx/ssa/InterferenceRegisterMapper' {0xbb294918}
+ -  12 :  : klass_index=11 name_and_type_index=396
+ -  13 :  : klass_index=147 name_and_type_index=397
+ -  14 :  : klass_index=147 name_and_type_index=398
+ -  15 :  : klass_index=391 name_and_type_index=399
+ -  16 :  : klass_index=147 name_and_type_index=400
+ -  17 :  : klass_index=147 name_and_type_index=401
+ -  18 :  : klass_index=7 name_and_type_index=402
+ -  19 :  : klass_index=147 name_and_type_index=403
+ -  20 :  : 'java/util/TreeMap' {0xbb0e9728}
+ -  21 :  : klass_index=20 name_and_type_index=405
+ -  22 :  : 'java/util/ArrayList' {0xbaef7bf8}
+ -  23 :  : klass_index=22 name_and_type_index=405
+ -  24 :  : klass_index=147 name_and_type_index=407
+ -  25 :  : klass_index=147 name_and_type_index=408
+ -  26 :  : klass_index=147 name_and_type_index=409
+ -  27 :  : klass_index=147 name_and_type_index=410
+ -  28 :  : klass_index=147 name_and_type_index=411
+ -  29 :  : klass_index=147 name_and_type_index=412
+ -  30 :  : klass_index=147 name_and_type_index=413
+ -  31 :  : klass_index=147 name_and_type_index=414
+ -  32 :  : klass_index=415 name_and_type_index=416
+ -  33 :  : "Printing local vars" {0xead1ca40}
+ -  34 :  : klass_index=418 name_and_type_index=419
+ -  35 :  : klass_index=420 name_and_type_index=421
+ -  36 :  : klass_index=422 name_and_type_index=423
+ -  37 :  : klass_index=424 name_and_type_index=425
+ -  38 :  : klass_index=424 name_and_type_index=426
+ -  39 :  : 'java/util/Map$Entry'
+ -  40 :  : 'java/lang/StringBuilder'
+ -  41 :  : klass_index=40 name_and_type_index=405
+ -  42 :  : klass_index=40 name_and_type_index=429
+ -  43 :  : klass_index=39 name_and_type_index=430
+ -  44 :  : klass_index=22 name_and_type_index=423
+ -  45 :  : 'com/android/dx/rop/code/RegisterSpec' {0xbb218df0}
+ -  46 :  : klass_index=45 name_and_type_index=432
+ -  47 :  : klass_index=40 name_and_type_index=433
+ -  48 :  : "Local: %s Registers: %s
+" {0xead1ca90}
+ -  49 :  : 'java/lang/Object'
+ -  50 :  : klass_index=39 name_and_type_index=436
+ -  51 :  : klass_index=418 name_and_type_index=437
+ -  52 :  : klass_index=420 name_and_type_index=438
+ -  53 :  : klass_index=439 name_and_type_index=423
+ -  54 :  : klass_index=22 name_and_type_index=440
+ -  55 :  : klass_index=22 name_and_type_index=441
+ -  56 :  : klass_index=147 name_and_type_index=442
+ -  57 :  : klass_index=45 name_and_type_index=443
+ -  58 :  : klass_index=147 name_and_type_index=444
+ -  59 :  : klass_index=147 name_and_type_index=445
+ -  60 :  : klass_index=147 name_and_type_index=446
+ -  61 :  : klass_index=391 name_and_type_index=447
+ -  62 :  : klass_index=94 name_and_type_index=448
+ -  63 :  : klass_index=449 name_and_type_index=450
+ -  64 :  : klass_index=94 name_and_type_index=451
+ -  65 :  : 'com/android/dx/rop/code/CstInsn' {0xbb1e0c60}
+ -  66 :  : klass_index=65 name_and_type_index=453
+ -  67 :  : 'com/android/dx/rop/cst/CstInteger' {0xbb164fd8}
+ -  68 :  : klass_index=67 name_and_type_index=455
+ -  69 :  : klass_index=7 name_and_type_index=456
+ -  70 :  : klass_index=147 name_and_type_index=457
+ -  71 :  : klass_index=147 name_and_type_index=458
+ -  72 :  : klass_index=147 name_and_type_index=459
+ -  73 :  : klass_index=147 name_and_type_index=460
+ -  74 :  : klass_index=147 name_and_type_index=461
+ -  75 :  : klass_index=7 name_and_type_index=462
+ -  76 :  : klass_index=391 name_and_type_index=463
+ -  77 :  : klass_index=151 name_and_type_index=464
+ -  78 :  : klass_index=151 name_and_type_index=465
+ -  79 :  : klass_index=151 name_and_type_index=466
+ -  80 :  : klass_index=147 name_and_type_index=467
+ -  81 :  : klass_index=147 name_and_type_index=468
+ -  82 :  : klass_index=151 name_and_type_index=469
+ -  83 :  : klass_index=147 name_and_type_index=470
+ -  84 :  : 'com/android/dx/ssa/NormalSsaInsn' {0xbb2470b8}
+ -  85 :  : klass_index=147 name_and_type_index=472
+ -  86 :  : klass_index=84 name_and_type_index=473
+ -  87 :  : klass_index=84 name_and_type_index=474
+ -  88 :  : klass_index=92 name_and_type_index=475
+ -  89 :  : klass_index=7 name_and_type_index=476
+ -  90 :  : klass_index=391 name_and_type_index=477
+ -  91 :  : klass_index=7 name_and_type_index=478
+ -  92 :  : 'com/android/dx/ssa/SsaBasicBlock' {0xbb24e548}
+ -  93 :  : klass_index=92 name_and_type_index=480
+ -  94 :  : 'com/android/dx/ssa/SsaInsn' {0xbb245030}
+ -  95 :  : klass_index=94 name_and_type_index=482
+ -  96 :  : klass_index=131 name_and_type_index=483
+ -  97 :  : klass_index=11 name_and_type_index=484
+ -  98 :  : klass_index=147 name_and_type_index=485
+ -  99 :  : klass_index=22 name_and_type_index=393
+ - 100 :  : klass_index=22 name_and_type_index=486
+ - 101 :  : klass_index=487 name_and_type_index=488
+ - 102 :  : klass_index=489 name_and_type_index=440
+ - 103 :  : klass_index=147 name_and_type_index=490
+ - 104 :  : klass_index=84 name_and_type_index=491
+ - 105 :  : 'com/android/dx/ssa/PhiInsn' {0xbb268440}
+ - 106 :  : klass_index=147 name_and_type_index=493
+ - 107 :  : klass_index=147 name_and_type_index=494
+ - 108 :  : klass_index=11 name_and_type_index=495
+ - 109 :  : 'com/android/dx/ssa/back/FirstFitLocalCombiningAllocator$1' {0xbb296ad8}
+ - 110 :  : klass_index=109 name_and_type_index=497
+ - 111 :  : klass_index=391 name_and_type_index=498
+ - 112 :  : 'java/lang/RuntimeException'
+ - 113 :  : "attempt to add invalid register mapping" {0xead1cae8}
+ - 114 :  : klass_index=112 name_and_type_index=501
+ - 115 :  : klass_index=11 name_and_type_index=502
+ - 116 :  : klass_index=7 name_and_type_index=503
+ - 117 :  : klass_index=147 name_and_type_index=504
+ - 118 :  : klass_index=84 name_and_type_index=482
+ - 119 :  : klass_index=131 name_and_type_index=440
+ - 120 :  : klass_index=147 name_and_type_index=505
+ - 121 :  : klass_index=420 name_and_type_index=506
+ - 122 :  : klass_index=131 name_and_type_index=507
+ - 123 :  : -2147483648
+ - 124 :  : klass_index=147 name_and_type_index=508
+ - 125 :  : klass_index=147 name_and_type_index=509
+ - 126 :  : klass_index=7 name_and_type_index=510
+ - 127 :  : klass_index=92 name_and_type_index=511
+ - 128 :  : klass_index=147 name_and_type_index=512
+ - 129 :  : klass_index=147 name_and_type_index=513
+ - 130 :  : klass_index=11 name_and_type_index=514
+ - 131 :  : 'com/android/dx/rop/code/RegisterSpecList' {0xbb22bd40}
+ - 132 :  : klass_index=516 name_and_type_index=517
+ - 133 :  : klass_index=131 name_and_type_index=393
+ - 134 :  : klass_index=516 name_and_type_index=518
+ - 135 :  : klass_index=519 name_and_type_index=425
+ - 136 :  : klass_index=519 name_and_type_index=520
+ - 137 :  : klass_index=131 name_and_type_index=521
+ - 138 :  : 'com/android/dx/rop/code/LocalItem'
+ - 139 :  : klass_index=105 name_and_type_index=473
+ - 140 :  : klass_index=105 name_and_type_index=482
+ - 141 :  : 'com/android/dx/ssa/back/FirstFitLocalCombiningAllocator$Multiset' {0xbb30d6d8}
+ - 142 :  : klass_index=141 name_and_type_index=393
+ - 143 :  : klass_index=141 name_and_type_index=524
+ - 144 :  : klass_index=94 name_and_type_index=473
+ - 145 :  : klass_index=141 name_and_type_index=525
+ - 146 :  : klass_index=141 name_and_type_index=526
+ - 147 :  : 'com/android/dx/ssa/back/FirstFitLocalCombiningAllocator' {0xbb28b798}
+ - 148 :  : 'com/android/dx/ssa/back/RegisterAllocator' {0xbb285eb0}
+ - 149 :  : 'Multiset'
+ - 150 :  : 'InnerClasses'
+ - 151 :  : 'com/android/dx/ssa/back/FirstFitLocalCombiningAllocator$Alignment' {0xbb2fd7a8}
+ - 152 :  : 'Alignment'
+ - 153 :  : ''
+ - 154 :  : 'DEBUG'
+ - 155 :  : 'Z'
+ - 156 :  : 'ConstantValue'
+ - 157 :  : 0
+ - 158 :  : 'localVariables'
+ - 159 :  : 'Ljava/util/Map;'
+ - 160 :  : 'Signature'
+ - 161 :  : 'Ljava/util/Map<Lcom/android/dx/rop/code/LocalItem;Ljava/util/ArrayList<Lcom/android/dx/rop/code/RegisterSpec;>;>;'
+ - 162 :  : 'moveResultPseudoInsns'
+ - 163 :  : 'Ljava/util/ArrayList;'
+ - 164 :  : 'Ljava/util/ArrayList<Lcom/android/dx/ssa/NormalSsaInsn;>;'
+ - 165 :  : 'invokeRangeInsns'
+ - 166 :  : 'phiInsns'
+ - 167 :  : 'Ljava/util/ArrayList<Lcom/android/dx/ssa/PhiInsn;>;'
+ - 168 :  : 'ssaRegsMapped'
+ - 169 :  : 'Ljava/util/BitSet;'
+ - 170 :  : 'mapper'
+ - 171 :  : 'Lcom/android/dx/ssa/InterferenceRegisterMapper;'
+ - 172 :  : 'paramRangeEnd'
+ - 173 :  : 'I'
+ - 174 :  : 'reservedRopRegs'
+ - 175 :  : 'usedRopRegs'
+ - 176 :  : 'minimizeRegisters'
+ - 177 :  : '<init>'
+ - 178 :  : '(Lcom/android/dx/ssa/SsaMethod;Lcom/android/dx/ssa/back/InterferenceGraph;Z)V'
+ - 179 :  : 'Code'
+ - 180 :  : 'LineNumberTable'
+ - 181 :  : 'LocalVariableTable'
+ - 182 :  : 'this'
+ - 183 :  : 'Lcom/android/dx/ssa/back/FirstFitLocalCombiningAllocator;'
+ - 184 :  : 'ssaMeth'
+ - 185 :  : 'Lcom/android/dx/ssa/SsaMethod;'
+ - 186 :  : 'interference'
+ - 187 :  : 'Lcom/android/dx/ssa/back/InterferenceGraph;'
+ - 188 :  : 'wantsParamsMovedHigh'
+ - 189 :  : '()Z'
+ - 190 :  : 'allocateRegisters'
+ - 191 :  : '()Lcom/android/dx/ssa/RegisterMapper;'
+ - 192 :  : 'printLocalVars'
+ - 193 :  : '()V'
+ - 194 :  : 'reg'
+ - 195 :  : 'Lcom/android/dx/rop/code/RegisterSpec;'
+ - 196 :  : 'i$'
+ - 197 :  : 'Ljava/util/Iterator;'
+ - 198 :  : 'regs'
+ - 199 :  : 'Ljava/lang/StringBuilder;'
+ - 200 :  : 'e'
+ - 201 :  : 'Entry'
+ - 202 :  : 'Ljava/util/Map$Entry;'
+ - 203 :  : 'LocalVariableTypeTable'
+ - 204 :  : 'Ljava/util/Map$Entry<Lcom/android/dx/rop/code/LocalItem;Ljava/util/ArrayList<Lcom/android/dx/rop/code/RegisterSpec;>;>;'
+ - 205 :  : 'StackMapTable'
+ - 206 :  : 'java/util/Iterator'
+ - 207 :  : 'java/util/Map$Entry'
+ - 208 :  : 'java/lang/StringBuilder'
+ - 209 :  : 'handleLocalAssociatedParams'
+ - 210 :  : 'ssaSpec'
+ - 211 :  : 'ssaReg'
+ - 212 :  : 'i'
+ - 213 :  : 'sz'
+ - 214 :  : 'paramIndex'
+ - 215 :  : 'paramCategory'
+ - 216 :  : 'ssaRegs'
+ - 217 :  : 'Ljava/util/ArrayList<Lcom/android/dx/rop/code/RegisterSpec;>;'
+ - 218 :  : 'com/android/dx/ssa/back/FirstFitLocalCombiningAllocator'
+ - 219 :  : 'java/util/ArrayList'
+ - 220 :  : 'getParameterIndexForReg'
+ - 221 :  : '(I)I'
+ - 222 :  : 'origInsn'
+ - 223 :  : 'Lcom/android/dx/rop/code/CstInsn;'
+ - 224 :  : 'defInsn'
+ - 225 :  : 'Lcom/android/dx/ssa/SsaInsn;'
+ - 226 :  : 'opcode'
+ - 227 :  : 'Lcom/android/dx/rop/code/Rop;'
+ - 228 :  : 'com/android/dx/ssa/SsaInsn'
+ - 229 :  : 'com/android/dx/rop/code/Rop'
+ - 230 :  : 'handleLocalAssociatedOther'
+ - 231 :  : 'category'
+ - 232 :  : 'maxCategory'
+ - 233 :  : 'ropReg'
+ - 234 :  : 'done'
+ - 235 :  : 'specs'
+ - 236 :  : 'tryMapRegs'
+ - 237 :  : '(Ljava/util/ArrayList;IIZ)Z'
+ - 238 :  : 'succeeded'
+ - 239 :  : 'spec'
+ - 240 :  : 'maxAllowedCategory'
+ - 241 :  : 'markReserved'
+ - 242 :  : 'remaining'
+ - 243 :  : 'com/android/dx/rop/code/RegisterSpec'
+ - 244 :  : '(Ljava/util/ArrayList<Lcom/android/dx/rop/code/RegisterSpec;>;IIZ)Z'
+ - 245 :  : 'tryMapReg'
+ - 246 :  : '(Lcom/android/dx/rop/code/RegisterSpec;II)Z'
+ - 247 :  : '(II)V'
+ - 248 :  : 'rangeContainsReserved'
+ - 249 :  : '(II)Z'
+ - 250 :  : 'ropRangeStart'
+ - 251 :  : 'width'
+ - 252 :  : 'isThisPointerReg'
+ - 253 :  : '(I)Z'
+ - 254 :  : 'startReg'
+ - 255 :  : 'getAlignment'
+ - 256 :  : '(I)Lcom/android/dx/ssa/back/FirstFitLocalCombiningAllocator$Alignment;'
+ - 257 :  : 'regCategory'
+ - 258 :  : 'alignment'
+ - 259 :  : 'Lcom/android/dx/ssa/back/FirstFitLocalCombiningAllocator$Alignment;'
+ - 260 :  : 'com/android/dx/ssa/back/FirstFitLocalCombiningAllocator$Alignment'
+ - 261 :  : 'findNextUnreservedRopReg'
+ - 262 :  : '(II)I'
+ - 263 :  : '(IILcom/android/dx/ssa/back/FirstFitLocalCombiningAllocator$Alignment;)I'
+ - 264 :  : 'findRopRegForLocal'
+ - 265 :  : 'handleUnassociatedParameters'
+ - 266 :  : 'szSsaRegs'
+ - 267 :  : 'handleInvokeRangeInsns'
+ - 268 :  : 'insn'
+ - 269 :  : 'Lcom/android/dx/ssa/NormalSsaInsn;'
+ - 270 :  : 'handleCheckCastResults'
+ - 271 :  : 'moveRopReg'
+ - 272 :  : 'checkRopReg'
+ - 273 :  : 'moveRegSpec'
+ - 274 :  : 'moveReg'
+ - 275 :  : 'predBlocks'
+ - 276 :  : 'predBlock'
+ - 277 :  : 'Lcom/android/dx/ssa/SsaBasicBlock;'
+ - 278 :  : 'insnList'
+ - 279 :  : 'checkCastInsn'
+ - 280 :  : 'checkRegSpec'
+ - 281 :  : 'checkReg'
+ - 282 :  : 'moveMapped'
+ - 283 :  : 'checkMapped'
+ - 284 :  : 'hasExceptionHandlers'
+ - 285 :  : 'Ljava/util/ArrayList<Lcom/android/dx/ssa/SsaInsn;>;'
+ - 286 :  : 'com/android/dx/ssa/NormalSsaInsn'
+ - 287 :  : 'java/util/BitSet'
+ - 288 :  : 'com/android/dx/ssa/SsaBasicBlock'
+ - 289 :  : 'handlePhiInsns'
+ - 290 :  : 'Lcom/android/dx/ssa/PhiInsn;'
+ - 291 :  : 'handleNormalUnassociated'
+ - 292 :  : 'canMapRegs'
+ - 293 :  : '(Ljava/util/ArrayList;I)Z'
+ - 294 :  : '(Ljava/util/ArrayList<Lcom/android/dx/rop/code/RegisterSpec;>;I)Z'
+ - 295 :  : 'canMapReg'
+ - 296 :  : '(Lcom/android/dx/rop/code/RegisterSpec;I)Z'
+ - 297 :  : 'spansParamRange'
+ - 298 :  : 'analyzeInstructions'
+ - 299 :  : 'addMapping'
+ - 300 :  : '(Lcom/android/dx/rop/code/RegisterSpec;I)V'
+ - 301 :  : 'adjustAndMapSourceRangeRange'
+ - 302 :  : '(Lcom/android/dx/ssa/NormalSsaInsn;)V'
+ - 303 :  : 'similarSpec'
+ - 304 :  : 'similarReg'
+ - 305 :  : 'j'
+ - 306 :  : 'similarRegisters'
+ - 307 :  : 'szSimilar'
+ - 308 :  : 'source'
+ - 309 :  : 'sourceReg'
+ - 310 :  : 'curRopReg'
+ - 311 :  : 'localItem'
+ - 312 :  : 'Lcom/android/dx/rop/code/LocalItem;'
+ - 313 :  : 'newRegStart'
+ - 314 :  : 'sources'
+ - 315 :  : 'Lcom/android/dx/rop/code/RegisterSpecList;'
+ - 316 :  : 'szSources'
+ - 317 :  : 'nextRopReg'
+ - 318 :  : 'com/android/dx/rop/code/RegisterSpecList'
+ - 319 :  : 'com/android/dx/rop/code/LocalItem'
+ - 320 :  : 'findRangeAndAdjust'
+ - 321 :  : '(Lcom/android/dx/ssa/NormalSsaInsn;)I'
+ - 322 :  : 'ssaCenterReg'
+ - 323 :  : 'rangeStart'
+ - 324 :  : 'curMovesRequired'
+ - 325 :  : 'fitWidth'
+ - 326 :  : 'score'
+ - 327 :  : 'categoriesForIndex'
+ - 328 :  : '[I'
+ - 329 :  : 'rangeLength'
+ - 330 :  : 'maxScore'
+ - 331 :  : 'resultRangeStart'
+ - 332 :  : 'resultMovesRequired'
+ - 333 :  : 'rangeStartOffset'
+ - 334 :  : '[I'
+ - 335 :  : 'findAnyFittingRange'
+ - 336 :  : '(Lcom/android/dx/ssa/NormalSsaInsn;I[ILjava/util/BitSet;)I'
+ - 337 :  : 'arr$'
+ - 338 :  : 'len$'
+ - 339 :  : 'regNumber'
+ - 340 :  : 'p64bitsAligned'
+ - 341 :  : 'p64bitsNotAligned'
+ - 342 :  : 'outMovesRequired'
+ - 343 :  : 'fitPlanForRange'
+ - 344 :  : '(ILcom/android/dx/ssa/NormalSsaInsn;[ILjava/util/BitSet;)I'
+ - 345 :  : 'liveOut'
+ - 346 :  : 'Lcom/android/dx/util/IntSet;'
+ - 347 :  : 'liveOutSpecs'
+ - 348 :  : 'seen'
+ - 349 :  : 'com/android/dx/util/IntSet'
+ - 350 :  : 'ssaSetToSpecs'
+ - 351 :  : '(Lcom/android/dx/util/IntSet;)Lcom/android/dx/rop/code/RegisterSpecList;'
+ - 352 :  : 'ssaSet'
+ - 353 :  : 'result'
+ - 354 :  : 'iter'
+ - 355 :  : 'Lcom/android/dx/util/IntIterator;'
+ - 356 :  : 'com/android/dx/util/IntIterator'
+ - 357 :  : 'getLocalItemForReg'
+ - 358 :  : '(I)Lcom/android/dx/rop/code/LocalItem;'
+ - 359 :  : 'entry'
+ - 360 :  : 'processPhiInsn'
+ - 361 :  : '(Lcom/android/dx/ssa/PhiInsn;)V'
+ - 362 :  : 'def'
+ - 363 :  : 'sourceDef'
+ - 364 :  : 'maxReg'
+ - 365 :  : 'resultReg'
+ - 366 :  : 'sourcesSize'
+ - 367 :  : 'mapSet'
+ - 368 :  : 'Lcom/android/dx/ssa/back/FirstFitLocalCombiningAllocator$Multiset;'
+ - 369 :  : 'mapReg'
+ - 370 :  : 'com/android/dx/ssa/PhiInsn'
+ - 371 :  : 'com/android/dx/ssa/back/FirstFitLocalCombiningAllocator$Multiset'
+ - 372 :  : 'isEven'
+ - 373 :  : 'regNumger'
+ - 374 :  : 'access$100'
+ - 375 :  : 'x0'
+ - 376 :  : 'access$200'
+ - 377 :  : '(Lcom/android/dx/ssa/back/FirstFitLocalCombiningAllocator;)Ljava/util/Map;'
+ - 378 :  : 'access$300'
+ - 379 :  : '(Lcom/android/dx/ssa/back/FirstFitLocalCombiningAllocator;)Ljava/util/ArrayList;'
+ - 380 :  : 'access$400'
+ - 381 :  : 'access$500'
+ - 382 :  : 'SourceFile'
+ - 383 :  : 'FirstFitLocalCombiningAllocator.java'
+ - 384 :  : name_index=166 signature_index=163
+ - 385 :  : name_index=165 signature_index=163
+ - 386 :  : name_index=162 signature_index=163
+ - 387 :  : name_index=158 signature_index=159
+ - 388 :  : name_index=372 signature_index=253
+ - 389 :  : name_index=177 signature_index=534
+ - 390 :  : 'java/util/BitSet'
+ - 391 :  : 'com/android/dx/ssa/SsaMethod' {0xbb2430f0}
+ - 392 :  : name_index=536 signature_index=537
+ - 393 :  : name_index=177 signature_index=538
+ - 394 :  : name_index=168 signature_index=169
+ - 395 :  : 'com/android/dx/ssa/InterferenceRegisterMapper'
+ - 396 :  : name_index=177 signature_index=539
+ - 397 :  : name_index=170 signature_index=171
+ - 398 :  : name_index=176 signature_index=155
+ - 399 :  : name_index=540 signature_index=537
+ - 400 :  : name_index=172 signature_index=173
+ - 401 :  : name_index=174 signature_index=169
+ - 402 :  : name_index=541 signature_index=247
+ - 403 :  : name_index=175 signature_index=169
+ - 404 :  : 'java/util/TreeMap'
+ - 405 :  : name_index=177 signature_index=193
+ - 406 :  : 'java/util/ArrayList'
+ - 407 :  : name_index=298 signature_index=193
+ - 408 :  : name_index=209 signature_index=193
+ - 409 :  : name_index=265 signature_index=193
+ - 410 :  : name_index=267 signature_index=193
+ - 411 :  : name_index=230 signature_index=193
+ - 412 :  : name_index=270 signature_index=193
+ - 413 :  : name_index=289 signature_index=193
+ - 414 :  : name_index=291 signature_index=193
+ - 415 :  : 'java/lang/System'
+ - 416 :  : name_index=543 signature_index=544
+ - 417 :  : 'Printing local vars'
+ - 418 :  : 'java/io/PrintStream'
+ - 419 :  : name_index=546 signature_index=547
+ - 420 :  : 'java/util/Map' {0xbae3fda8}
+ - 421 :  : name_index=549 signature_index=550
+ - 422 :  : 'java/util/Set' {0xbaf00eb0}
+ - 423 :  : name_index=552 signature_index=553
+ - 424 :  : 'java/util/Iterator' {0xbaf12130}
+ - 425 :  : name_index=554 signature_index=189
+ - 426 :  : name_index=555 signature_index=556
+ - 427 :  : 'java/util/Map$Entry'
+ - 428 :  : 'java/lang/StringBuilder'
+ - 429 :  : name_index=557 signature_index=558
+ - 430 :  : name_index=559 signature_index=556
+ - 431 :  : 'com/android/dx/rop/code/RegisterSpec'
+ - 432 :  : name_index=560 signature_index=537
+ - 433 :  : name_index=557 signature_index=561
+ - 434 :  : 'Local: %s Registers: %s
+'
+ - 435 :  : 'java/lang/Object'
+ - 436 :  : name_index=562 signature_index=556
+ - 437 :  : name_index=563 signature_index=564
+ - 438 :  : name_index=565 signature_index=566
+ - 439 :  : 'java/util/Collection' {0xbaebf248}
+ - 440 :  : name_index=568 signature_index=537
+ - 441 :  : name_index=569 signature_index=570
+ - 442 :  : name_index=220 signature_index=221
+ - 443 :  : name_index=571 signature_index=537
+ - 444 :  : name_index=299 signature_index=300
+ - 445 :  : name_index=236 signature_index=237
+ - 446 :  : name_index=184 signature_index=185
+ - 447 :  : name_index=572 signature_index=573
+ - 448 :  : name_index=574 signature_index=575
+ - 449 :  : 'com/android/dx/rop/code/Rop' {0xbb2289a8}
+ - 450 :  : name_index=574 signature_index=537
+ - 451 :  : name_index=576 signature_index=577
+ - 452 :  : 'com/android/dx/rop/code/CstInsn'
+ - 453 :  : name_index=578 signature_index=579
+ - 454 :  : 'com/android/dx/rop/cst/CstInteger'
+ - 455 :  : name_index=559 signature_index=537
+ - 456 :  : name_index=569 signature_index=253
+ - 457 :  : name_index=264 signature_index=262
+ - 458 :  : name_index=292 signature_index=293
+ - 459 :  : name_index=245 signature_index=246
+ - 460 :  : name_index=241 signature_index=247
+ - 461 :  : name_index=295 signature_index=296
+ - 462 :  : name_index=541 signature_index=580
+ - 463 :  : name_index=581 signature_index=189
+ - 464 :  : name_index=582 signature_index=259
+ - 465 :  : name_index=583 signature_index=259
+ - 466 :  : name_index=584 signature_index=259
+ - 467 :  : name_index=255 signature_index=256
+ - 468 :  : name_index=261 signature_index=263
+ - 469 :  : name_index=585 signature_index=586
+ - 470 :  : name_index=587 signature_index=588
+ - 471 :  : 'com/android/dx/ssa/NormalSsaInsn'
+ - 472 :  : name_index=301 signature_index=302
+ - 473 :  : name_index=589 signature_index=590
+ - 474 :  : name_index=591 signature_index=592
+ - 475 :  : name_index=593 signature_index=594
+ - 476 :  : name_index=595 signature_index=537
+ - 477 :  : name_index=596 signature_index=597
+ - 478 :  : name_index=598 signature_index=221
+ - 479 :  : 'com/android/dx/ssa/SsaBasicBlock'
+ - 480 :  : name_index=599 signature_index=597
+ - 481 :  : 'com/android/dx/ssa/SsaInsn'
+ - 482 :  : name_index=600 signature_index=601
+ - 483 :  : name_index=569 signature_index=588
+ - 484 :  : name_index=602 signature_index=221
+ - 485 :  : name_index=261 signature_index=262
+ - 486 :  : name_index=603 signature_index=604
+ - 487 :  : 'com/android/dx/rop/code/Insn' {0xbb1de438}
+ - 488 :  : name_index=606 signature_index=607
+ - 489 :  : 'com/android/dx/rop/type/TypeList' {0xbb158350}
+ - 490 :  : name_index=609 signature_index=610
+ - 491 :  : name_index=611 signature_index=612
+ - 492 :  : 'com/android/dx/ssa/PhiInsn'
+ - 493 :  : name_index=360 signature_index=361
+ - 494 :  : name_index=297 signature_index=249
+ - 495 :  : name_index=613 signature_index=296
+ - 496 :  : 'com/android/dx/ssa/back/FirstFitLocalCombiningAllocator$1'
+ - 497 :  : name_index=177 signature_index=614
+ - 498 :  : name_index=615 signature_index=618
+ - 499 :  : 'java/lang/RuntimeException'
+ - 500 :  : 'attempt to add invalid register mapping'
+ - 501 :  : name_index=177 signature_index=547
+ - 502 :  : name_index=299 signature_index=619
+ - 503 :  : name_index=541 signature_index=538
+ - 504 :  : name_index=320 signature_index=321
+ - 505 :  : name_index=357 signature_index=358
+ - 506 :  : name_index=569 signature_index=620
+ - 507 :  : name_index=621 signature_index=221
+ - 508 :  : name_index=343 signature_index=344
+ - 509 :  : name_index=335 signature_index=336
+ - 510 :  : name_index=622 signature_index=193
+ - 511 :  : name_index=623 signature_index=624
+ - 512 :  : name_index=350 signature_index=351
+ - 513 :  : name_index=248 signature_index=249
+ - 514 :  : name_index=625 signature_index=626
+ - 515 :  : 'com/android/dx/rop/code/RegisterSpecList'
+ - 516 :  : 'com/android/dx/util/IntSet' {0xbb25c9e8}
+ - 517 :  : name_index=627 signature_index=537
+ - 518 :  : name_index=552 signature_index=628
+ - 519 :  : 'com/android/dx/util/IntIterator' {0xbb25e280}
+ - 520 :  : name_index=555 signature_index=537
+ - 521 :  : name_index=541 signature_index=612
+ - 522 :  : 'com/android/dx/rop/code/LocalItem'
+ - 523 :  : 'com/android/dx/ssa/back/FirstFitLocalCombiningAllocator$Multiset'
+ - 524 :  : name_index=603 signature_index=538
+ - 525 :  : name_index=629 signature_index=537
+ - 526 :  : name_index=630 signature_index=537
+ - 527 :  : 'com/android/dx/ssa/back/FirstFitLocalCombiningAllocator'
+ - 528 :  : 'com/android/dx/ssa/back/RegisterAllocator'
+ - 529 :  : 'com/android/dx/ssa/back/FirstFitLocalCombiningAllocator$Alignment'
+ - 530 :  : 'java/util/Iterator'
+ - 531 :  : 'com/android/dx/rop/code/Rop'
+ - 532 :  : 'com/android/dx/util/IntSet'
+ - 533 :  : 'com/android/dx/util/IntIterator'
+ - 534 :  : '(Lcom/android/dx/ssa/SsaMethod;Lcom/android/dx/ssa/back/InterferenceGraph;)V'
+ - 535 :  : 'com/android/dx/ssa/SsaMethod'
+ - 536 :  : 'getRegCount'
+ - 537 :  : '()I'
+ - 538 :  : '(I)V'
+ - 539 :  : '(Lcom/android/dx/ssa/back/InterferenceGraph;I)V'
+ - 540 :  : 'getParamWidth'
+ - 541 :  : 'set'
+ - 542 :  : 'java/lang/System'
+ - 543 :  : 'out'
+ - 544 :  : 'Ljava/io/PrintStream;'
+ - 545 :  : 'java/io/PrintStream'
+ - 546 :  : 'println'
+ - 547 :  : '(Ljava/lang/String;)V'
+ - 548 :  : 'java/util/Map'
+ - 549 :  : 'entrySet'
+ - 550 :  : '()Ljava/util/Set;'
+ - 551 :  : 'java/util/Set'
+ - 552 :  : 'iterator'
+ - 553 :  : '()Ljava/util/Iterator;'
+ - 554 :  : 'hasNext'
+ - 555 :  : 'next'
+ - 556 :  : '()Ljava/lang/Object;'
+ - 557 :  : 'append'
+ - 558 :  : '(C)Ljava/lang/StringBuilder;'
+ - 559 :  : 'getValue'
+ - 560 :  : 'getReg'
+ - 561 :  : '(I)Ljava/lang/StringBuilder;'
+ - 562 :  : 'getKey'
+ - 563 :  : 'printf'
+ - 564 :  : '(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;'
+ - 565 :  : 'values'
+ - 566 :  : '()Ljava/util/Collection;'
+ - 567 :  : 'java/util/Collection'
+ - 568 :  : 'size'
+ - 569 :  : 'get'
+ - 570 :  : '(I)Ljava/lang/Object;'
+ - 571 :  : 'getCategory'
+ - 572 :  : 'getDefinitionForRegister'
+ - 573 :  : '(I)Lcom/android/dx/ssa/SsaInsn;'
+ - 574 :  : 'getOpcode'
+ - 575 :  : '()Lcom/android/dx/rop/code/Rop;'
+ - 576 :  : 'getOriginalRopInsn'
+ - 577 :  : '()Lcom/android/dx/rop/code/Insn;'
+ - 578 :  : 'getConstant'
+ - 579 :  : '()Lcom/android/dx/rop/cst/Constant;'
+ - 580 :  : '(IIZ)V'
+ - 581 :  : 'isStatic'
+ - 582 :  : 'UNSPECIFIED'
+ - 583 :  : 'EVEN'
+ - 584 :  : 'ODD'
+ - 585 :  : 'nextClearBit'
+ - 586 :  : '(Ljava/util/BitSet;I)I'
+ - 587 :  : 'getDefinitionSpecForSsaReg'
+ - 588 :  : '(I)Lcom/android/dx/rop/code/RegisterSpec;'
+ - 589 :  : 'getResult'
+ - 590 :  : '()Lcom/android/dx/rop/code/RegisterSpec;'
+ - 591 :  : 'getBlock'
+ - 592 :  : '()Lcom/android/dx/ssa/SsaBasicBlock;'
+ - 593 :  : 'getPredecessors'
+ - 594 :  : '()Ljava/util/BitSet;'
+ - 595 :  : 'cardinality'
+ - 596 :  : 'getBlocks'
+ - 597 :  : '()Ljava/util/ArrayList;'
+ - 598 :  : 'nextSetBit'
+ - 599 :  : 'getInsns'
+ - 600 :  : 'getSources'
+ - 601 :  : '()Lcom/android/dx/rop/code/RegisterSpecList;'
+ - 602 :  : 'oldToNew'
+ - 603 :  : 'add'
+ - 604 :  : '(Ljava/lang/Object;)Z'
+ - 605 :  : 'com/android/dx/rop/code/Insn'
+ - 606 :  : 'getCatches'
+ - 607 :  : '()Lcom/android/dx/rop/type/TypeList;'
+ - 608 :  : 'com/android/dx/rop/type/TypeList'
+ - 609 :  : 'insertMoveBefore'
+ - 610 :  : '(Lcom/android/dx/ssa/SsaInsn;Lcom/android/dx/rop/code/RegisterSpec;)Lcom/android/dx/rop/code/RegisterSpec;'
+ - 611 :  : 'changeOneSource'
+ - 612 :  : '(ILcom/android/dx/rop/code/RegisterSpec;)V'
+ - 613 :  : 'interferes'
+ - 614 :  : '(Lcom/android/dx/ssa/back/FirstFitLocalCombiningAllocator;)V'
+ - 615 :  : 'forEachInsn'
+ - 616 :  : 'com/android/dx/ssa/SsaInsn$Visitor'
+ - 617 :  : 'Visitor'
+ - 618 :  : '(Lcom/android/dx/ssa/SsaInsn$Visitor;)V'
+ - 619 :  : '(III)V'
+ - 620 :  : '(Ljava/lang/Object;)Ljava/lang/Object;'
+ - 621 :  : 'indexOfRegister'
+ - 622 :  : 'clear'
+ - 623 :  : 'getLiveOutRegs'
+ - 624 :  : '()Lcom/android/dx/util/IntSet;'
+ - 625 :  : 'areAnyPinned'
+ - 626 :  : '(Lcom/android/dx/rop/code/RegisterSpecList;II)Z'
+ - 627 :  : 'elements'
+ - 628 :  : '()Lcom/android/dx/util/IntIterator;'
+ - 629 :  : 'getSize'
+ - 630 :  : 'getAndRemoveHighestCount'
+ - 631 :  : 'com/android/dx/ssa/SsaInsn$Visitor'
+
+RDI=0x00007f847000bc90 is an unknown value
+R8 =0x00007f847000bc68 is an unknown value
+R9 =0x0000000000000001 is an unknown value
+R10=0x00000000bb287840 is pointing into object: 0x00000000bb287828
+[[I 
+ - klass: 'java/lang/Object'[]
+ - length: 39
+R11=0x0000000000000000 is an unknown value
+R12=0x000000000000000f is an unknown value
+R13=0x000000b700b6006e is an unknown value
+R14=0x00007f84790b1c30 is pointing into the stack for thread: 0x00007f847000b000
+R15=0x00007f84790b1c30 is pointing into the stack for thread: 0x00007f847000b000
+
+
+Stack: [0x00007f8478fb3000,0x00007f84790b4000],  sp=0x00007f84790b1a70,  free space=1018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x74519f]  LinkResolver::runtime_resolve_virtual_method(CallInfo&, methodHandle, KlassHandle, Handle, KlassHandle, bool, Thread*)+0xff
+V  [libjvm.so+0x745bc4]  LinkResolver::resolve_invokevirtual(CallInfo&, Handle, constantPoolHandle, int, Thread*)+0x184
+V  [libjvm.so+0x5f846f]  InterpreterRuntime::resolve_invoke(JavaThread*, Bytecodes::Code)+0x17f
+j  com.android.dx.ssa.back.FirstFitLocalCombiningAllocator.handleLocalAssociatedOther()V+88
+j  com.android.dx.ssa.back.FirstFitLocalCombiningAllocator.allocateRegisters()Lcom/android/dx/ssa/RegisterMapper;+17
+j  com.android.dx.ssa.back.SsaToRop.convert()Lcom/android/dx/rop/code/RopMethod;+21
+j  com.android.dx.ssa.back.SsaToRop.convertToRopMethod(Lcom/android/dx/ssa/SsaMethod;Z)Lcom/android/dx/rop/code/RopMethod;+9
+j  com.android.dx.ssa.Optimizer.optimize(Lcom/android/dx/rop/code/RopMethod;IZZLcom/android/dx/rop/code/TranslationAdvice;Ljava/util/EnumSet;)Lcom/android/dx/rop/code/RopMethod;+30
+j  com.android.dx.ssa.Optimizer.optimize(Lcom/android/dx/rop/code/RopMethod;IZZLcom/android/dx/rop/code/TranslationAdvice;)Lcom/android/dx/rop/code/RopMethod;+12
+j  com.android.dx.dex.cf.CfTranslator.processMethods(Lcom/android/dx/cf/direct/DirectClassFile;Lcom/android/dx/dex/cf/CfOptions;Lcom/android/dx/dex/DexOptions;Lcom/android/dx/dex/file/ClassDefItem;Lcom/android/dx/dex/file/DexFile;)V+265
+j  com.android.dx.dex.cf.CfTranslator.translate0(Lcom/android/dx/cf/direct/DirectClassFile;[BLcom/android/dx/dex/cf/CfOptions;Lcom/android/dx/dex/DexOptions;Lcom/android/dx/dex/file/DexFile;)Lcom/android/dx/dex/file/ClassDefItem;+120
+j  com.android.dx.dex.cf.CfTranslator.translate(Lcom/android/dx/cf/direct/DirectClassFile;[BLcom/android/dx/dex/cf/CfOptions;Lcom/android/dx/dex/DexOptions;Lcom/android/dx/dex/file/DexFile;)Lcom/android/dx/dex/file/ClassDefItem;+6
+j  com.android.dx.command.dexer.Main.processClass(Ljava/lang/String;[B)Z+251
+j  com.android.dx.command.dexer.Main.processFileBytes(Ljava/lang/String;J[B)Z+188
+j  com.android.dx.command.dexer.Main.access$300(Ljava/lang/String;J[B)Z+3
+j  com.android.dx.command.dexer.Main$1.processFileBytes(Ljava/lang/String;J[B)Z+4
+j  com.android.dx.cf.direct.ClassPathOpener.processArchive(Ljava/io/File;)Z+196
+j  com.android.dx.cf.direct.ClassPathOpener.processOne(Ljava/io/File;Z)Z+48
+j  com.android.dx.cf.direct.ClassPathOpener.process()Z+15
+j  com.android.dx.command.dexer.Main.processOne(Ljava/lang/String;Lcom/android/dx/cf/direct/ClassPathOpener$FileNameFilter;)V+58
+j  com.android.dx.command.dexer.Main.processAllFiles()Z+202
+j  com.android.dx.command.dexer.Main.runMonoDex()I+58
+j  com.android.dx.command.dexer.Main.run(Lcom/android/dx/command/dexer/Main$Arguments;)I+76
+j  com.android.dx.command.dexer.Main.main([Ljava/lang/String;)V+14
+j  com.android.dx.command.Main.main([Ljava/lang/String;)V+61
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x600045]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x365
+V  [libjvm.so+0x5feaa8]  JavaCalls::call(JavaValue*, methodHandle, JavaCallArguments*, Thread*)+0x28
+V  [libjvm.so+0x638a59]  jni_invoke_static(JNIEnv_*, JavaValue*, _jobject*, JNICallType, _jmethodID*, JNI_ArgumentPusher*, Thread*)+0x219
+V  [libjvm.so+0x641672]  jni_CallStaticVoidMethod+0x162
+C  [libjli.so+0x36d9]  JavaMain+0x7e9
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.android.dx.ssa.back.FirstFitLocalCombiningAllocator.handleLocalAssociatedOther()V+88
+j  com.android.dx.ssa.back.FirstFitLocalCombiningAllocator.allocateRegisters()Lcom/android/dx/ssa/RegisterMapper;+17
+j  com.android.dx.ssa.back.SsaToRop.convert()Lcom/android/dx/rop/code/RopMethod;+21
+j  com.android.dx.ssa.back.SsaToRop.convertToRopMethod(Lcom/android/dx/ssa/SsaMethod;Z)Lcom/android/dx/rop/code/RopMethod;+9
+j  com.android.dx.ssa.Optimizer.optimize(Lcom/android/dx/rop/code/RopMethod;IZZLcom/android/dx/rop/code/TranslationAdvice;Ljava/util/EnumSet;)Lcom/android/dx/rop/code/RopMethod;+30
+j  com.android.dx.ssa.Optimizer.optimize(Lcom/android/dx/rop/code/RopMethod;IZZLcom/android/dx/rop/code/TranslationAdvice;)Lcom/android/dx/rop/code/RopMethod;+12
+j  com.android.dx.dex.cf.CfTranslator.processMethods(Lcom/android/dx/cf/direct/DirectClassFile;Lcom/android/dx/dex/cf/CfOptions;Lcom/android/dx/dex/DexOptions;Lcom/android/dx/dex/file/ClassDefItem;Lcom/android/dx/dex/file/DexFile;)V+265
+j  com.android.dx.dex.cf.CfTranslator.translate0(Lcom/android/dx/cf/direct/DirectClassFile;[BLcom/android/dx/dex/cf/CfOptions;Lcom/android/dx/dex/DexOptions;Lcom/android/dx/dex/file/DexFile;)Lcom/android/dx/dex/file/ClassDefItem;+120
+j  com.android.dx.dex.cf.CfTranslator.translate(Lcom/android/dx/cf/direct/DirectClassFile;[BLcom/android/dx/dex/cf/CfOptions;Lcom/android/dx/dex/DexOptions;Lcom/android/dx/dex/file/DexFile;)Lcom/android/dx/dex/file/ClassDefItem;+6
+j  com.android.dx.command.dexer.Main.processClass(Ljava/lang/String;[B)Z+251
+j  com.android.dx.command.dexer.Main.processFileBytes(Ljava/lang/String;J[B)Z+188
+j  com.android.dx.command.dexer.Main.access$300(Ljava/lang/String;J[B)Z+3
+j  com.android.dx.command.dexer.Main$1.processFileBytes(Ljava/lang/String;J[B)Z+4
+j  com.android.dx.cf.direct.ClassPathOpener.processArchive(Ljava/io/File;)Z+196
+j  com.android.dx.cf.direct.ClassPathOpener.processOne(Ljava/io/File;Z)Z+48
+j  com.android.dx.cf.direct.ClassPathOpener.process()Z+15
+j  com.android.dx.command.dexer.Main.processOne(Ljava/lang/String;Lcom/android/dx/cf/direct/ClassPathOpener$FileNameFilter;)V+58
+j  com.android.dx.command.dexer.Main.processAllFiles()Z+202
+j  com.android.dx.command.dexer.Main.runMonoDex()I+58
+j  com.android.dx.command.dexer.Main.run(Lcom/android/dx/command/dexer/Main$Arguments;)I+76
+j  com.android.dx.command.dexer.Main.main([Ljava/lang/String;)V+14
+j  com.android.dx.command.Main.main([Ljava/lang/String;)V+61
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f8470192800 JavaThread "Service Thread" daemon [_thread_blocked, id=12437, stack(0x00007f84679f4000,0x00007f8467af5000)]
+  0x00007f8470190000 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=12436, stack(0x00007f8467af5000,0x00007f8467bf6000)]
+  0x00007f847018d800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=12435, stack(0x00007f846c0c2000,0x00007f846c1c3000)]
+  0x00007f8470159800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=12429, stack(0x00007f84740c4000,0x00007f84741c5000)]
+  0x00007f8470138800 JavaThread "Finalizer" daemon [_thread_blocked, id=12415, stack(0x00007f84741c5000,0x00007f84742c6000)]
+  0x00007f8470136800 JavaThread "Reference Handler" daemon [_thread_blocked, id=12413, stack(0x00007f84742c6000,0x00007f84743c7000)]
+=>0x00007f847000b000 JavaThread "main" [_thread_in_vm, id=12404, stack(0x00007f8478fb3000,0x00007f84790b4000)]
+
+Other Threads:
+  0x00007f8470132000 VMThread [stack: 0x00007f84743c7000,0x00007f84744c8000] [id=12412]
+  0x00007f847019d800 WatcherThread [stack: 0x00007f84678f3000,0x00007f84679f4000] [id=12438]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 34304K, used 5694K [0x00000000eaa80000, 0x00000000ece80000, 0x0000000100000000)
+  eden space 31744K, 9% used [0x00000000eaa80000,0x00000000ead91c68,0x00000000ec980000)
+  from space 2560K, 99% used [0x00000000ecc00000,0x00000000ece7dc78,0x00000000ece80000)
+  to   space 2560K, 0% used [0x00000000ec980000,0x00000000ec980000,0x00000000ecc00000)
+ ParOldGen       total 41472K, used 3311K [0x00000000c0000000, 0x00000000c2880000, 0x00000000eaa80000)
+  object space 41472K, 7% used [0x00000000c0000000,0x00000000c033be90,0x00000000c2880000)
+ PSPermGen       total 21504K, used 5519K [0x00000000bae00000, 0x00000000bc300000, 0x00000000c0000000)
+  object space 21504K, 25% used [0x00000000bae00000,0x00000000bb363d50,0x00000000bc300000)
+
+Card table byte_map: [0x00007f8475e5e000,0x00007f8476088000] byte_map_base: 0x00007f8475887000
+
+Polling page: 0x00007f84790cd000
+
+Code Cache  [0x00007f846d000000, 0x00007f846d270000, 0x00007f8470000000)
+ total_blobs=447 nmethods=219 adapters=182 free_code_cache=48233Kb largest_free_block=49360704
+
+Compilation events (10 events):
+Event: 3.869 Thread 0x00007f8470190000 nmethod 212 0x00007f846d0c3b90 code [0x00007f846d0c3ce0, 0x00007f846d0c3d98]
+Event: 3.869 Thread 0x00007f8470190000  213             com.android.dx.rop.code.BasicBlockList::forEachInsn (39 bytes)
+Event: 3.884 Thread 0x00007f8470190000 nmethod 213 0x00007f846d0c84d0 code [0x00007f846d0c8640, 0x00007f846d0c88f8]
+Event: 3.884 Thread 0x00007f8470190000  214   !         com.android.dx.util.IntList::set (53 bytes)
+Event: 3.886 Thread 0x00007f8470190000 nmethod 214 0x00007f846d0c8190 code [0x00007f846d0c82e0, 0x00007f846d0c83b8]
+Event: 3.886 Thread 0x00007f8470190000  215             java.lang.Enum::ordinal (5 bytes)
+Event: 3.886 Thread 0x00007f8470190000 nmethod 215 0x00007f846d0c7f90 code [0x00007f846d0c80c0, 0x00007f846d0c8118]
+Event: 3.886 Thread 0x00007f8470190000  216             com.android.dx.ssa.SsaBasicBlock::newFromRop (183 bytes)
+Event: 4.080 Thread 0x00007f8470190000 nmethod 216 0x00007f846d0db990 code [0x00007f846d0dbc80, 0x00007f846d0dd240]
+Event: 4.080 Thread 0x00007f8470190000  217             com.android.dx.ssa.LocalVariableExtractor::processBlock (383 bytes)
+
+GC Heap History (4 events):
+Event: 2.132 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 18432K, used 15872K [0x00000000eaa80000, 0x00000000ebf00000, 0x0000000100000000)
+  eden space 15872K, 100% used [0x00000000eaa80000,0x00000000eba00000,0x00000000eba00000)
+  from space 2560K, 0% used [0x00000000ebc80000,0x00000000ebc80000,0x00000000ebf00000)
+  to   space 2560K, 0% used [0x00000000eba00000,0x00000000eba00000,0x00000000ebc80000)
+ ParOldGen       total 41472K, used 0K [0x00000000c0000000, 0x00000000c2880000, 0x00000000eaa80000)
+  object space 41472K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000c2880000)
+ PSPermGen       total 21504K, used 5333K [0x00000000bae00000, 0x00000000bc300000, 0x00000000c0000000)
+  object space 21504K, 24% used [0x00000000bae00000,0x00000000bb3356a8,0x00000000bc300000)
+Event: 2.162 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 18432K, used 2546K [0x00000000eaa80000, 0x00000000ece80000, 0x0000000100000000)
+  eden space 15872K, 0% used [0x00000000eaa80000,0x00000000eaa80000,0x00000000eba00000)
+  from space 2560K, 99% used [0x00000000eba00000,0x00000000ebc7c8a8,0x00000000ebc80000)
+  to   space 2560K, 0% used [0x00000000ecc00000,0x00000000ecc00000,0x00000000ece80000)
+ ParOldGen       total 41472K, used 1195K [0x00000000c0000000, 0x00000000c2880000, 0x00000000eaa80000)
+  object space 41472K, 2% used [0x00000000c0000000,0x00000000c012adf0,0x00000000c2880000)
+ PSPermGen       total 21504K, used 5333K [0x00000000bae00000, 0x00000000bc300000, 0x00000000c0000000)
+  object space 21504K, 24% used [0x00000000bae00000,0x00000000bb3356a8,0x00000000bc300000)
+}
+Event: 3.812 GC heap before
+{Heap before GC invocations=2 (full 0):
+ PSYoungGen      total 18432K, used 18418K [0x00000000eaa80000, 0x00000000ece80000, 0x0000000100000000)
+  eden space 15872K, 100% used [0x00000000eaa80000,0x00000000eba00000,0x00000000eba00000)
+  from space 2560K, 99% used [0x00000000eba00000,0x00000000ebc7c8a8,0x00000000ebc80000)
+  to   space 2560K, 0% used [0x00000000ecc00000,0x00000000ecc00000,0x00000000ece80000)
+ ParOldGen       total 41472K, used 1195K [0x00000000c0000000, 0x00000000c2880000, 0x00000000eaa80000)
+  object space 41472K, 2% used [0x00000000c0000000,0x00000000c012adf0,0x00000000c2880000)
+ PSPermGen       total 21504K, used 5511K [0x00000000bae00000, 0x00000000bc300000, 0x00000000c0000000)
+  object space 21504K, 25% used [0x00000000bae00000,0x00000000bb361c30,0x00000000bc300000)
+Event: 3.846 GC heap after
+Heap after GC invocations=2 (full 0):
+ PSYoungGen      total 34304K, used 2551K [0x00000000eaa80000, 0x00000000ece80000, 0x0000000100000000)
+  eden space 31744K, 0% used [0x00000000eaa80000,0x00000000eaa80000,0x00000000ec980000)
+  from space 2560K, 99% used [0x00000000ecc00000,0x00000000ece7dc78,0x00000000ece80000)
+  to   space 2560K, 0% used [0x00000000ec980000,0x00000000ec980000,0x00000000ecc00000)
+ ParOldGen       total 41472K, used 3311K [0x00000000c0000000, 0x00000000c2880000, 0x00000000eaa80000)
+  object space 41472K, 7% used [0x00000000c0000000,0x00000000c033be90,0x00000000c2880000)
+ PSPermGen       total 21504K, used 5511K [0x00000000bae00000, 0x00000000bc300000, 0x00000000c0000000)
+  object space 21504K, 25% used [0x00000000bae00000,0x00000000bb361c30,0x00000000bc300000)
+}
+
+Deoptimization events (8 events):
+Event: 1.910 Thread 0x00007f847000b000 Uncommon trap: reason=null_check action=make_not_entrant pc=0x00007f846d085d14 method=com.android.dx.rop.code.LocalItem.equals(Ljava/lang/Object;)Z @ 1
+Event: 2.103 Thread 0x00007f847000b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f846d08d44c method=com.android.dx.ssa.NormalSsaInsn.accept(Lcom/android/dx/ssa/SsaInsn$Visitor;)V @ 9
+Event: 2.122 Thread 0x00007f847000b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f846d08d44c method=com.android.dx.ssa.NormalSsaInsn.accept(Lcom/android/dx/ssa/SsaInsn$Visitor;)V @ 9
+Event: 2.163 Thread 0x00007f847000b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f846d08d44c method=com.android.dx.ssa.NormalSsaInsn.accept(Lcom/android/dx/ssa/SsaInsn$Visitor;)V @ 9
+Event: 2.164 Thread 0x00007f847000b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f846d072e58 method=com.android.dx.ssa.NormalSsaInsn.accept(Lcom/android/dx/ssa/SsaInsn$Visitor;)V @ 9
+Event: 3.218 Thread 0x00007f847000b000 Uncommon trap: reason=null_check action=make_not_entrant pc=0x00007f846d0bf560 method=com.android.dx.rop.code.RegisterSpec.equals(Ljava/lang/Object;)Z @ 1
+Event: 3.861 Thread 0x00007f847000b000 Uncommon trap: reason=unreached action=reinterpret pc=0x00007f846d0d8738 method=com.android.dx.rop.code.LocalVariableExtractor.processBlock(I)V @ 138
+Event: 4.018 Thread 0x00007f847000b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f846d08d44c method=com.android.dx.ssa.NormalSsaInsn.accept(Lcom/android/dx/ssa/SsaInsn$Visitor;)V @ 9
+
+Internal exceptions (10 events):
+Event: 1.422 Thread 0x00007f847000b000 Threw 0x00000000eb5ebd38 at /HUDSON/workspace/7u-2-build-linux-amd64/jdk7u75/1940/hotspot/src/share/vm/prims/jvm.cpp:1281
+Event: 1.741 Thread 0x00007f847000b000 Threw 0x00000000eb795898 at /HUDSON/workspace/7u-2-build-linux-amd64/jdk7u75/1940/hotspot/src/share/vm/prims/jvm.cpp:1281
+Event: 1.771 Thread 0x00007f847000b000 Threw 0x00000000eb7d3248 at /HUDSON/workspace/7u-2-build-linux-amd64/jdk7u75/1940/hotspot/src/share/vm/prims/jvm.cpp:1281
+Event: 1.910 Thread 0x00007f847000b000 Implicit null exception at 0x00007f846d085a33 to 0x00007f846d085cf9
+Event: 2.118 Thread 0x00007f847000b000 Threw 0x00000000eb9df960 at /HUDSON/workspace/7u-2-build-linux-amd64/jdk7u75/1940/hotspot/src/share/vm/prims/jvm.cpp:1281
+Event: 2.265 Thread 0x00007f847000b000 Threw 0x00000000eabdae30 at /HUDSON/workspace/7u-2-build-linux-amd64/jdk7u75/1940/hotspot/src/share/vm/prims/jvm.cpp:1281
+Event: 2.274 Thread 0x00007f847000b000 Threw 0x00000000eac0ee30 at /HUDSON/workspace/7u-2-build-linux-amd64/jdk7u75/1940/hotspot/src/share/vm/prims/jvm.cpp:1281
+Event: 2.539 Thread 0x00007f847000b000 Threw 0x00000000eae7f280 at /HUDSON/workspace/7u-2-build-linux-amd64/jdk7u75/1940/hotspot/src/share/vm/prims/jvm.cpp:1281
+Event: 2.752 Thread 0x00007f847000b000 Threw 0x00000000eb00b288 at /HUDSON/workspace/7u-2-build-linux-amd64/jdk7u75/1940/hotspot/src/share/vm/prims/jvm.cpp:1281
+Event: 3.218 Thread 0x00007f847000b000 Implicit null exception at 0x00007f846d0be956 to 0x00007f846d0bf535
+
+Events (10 events):
+Event: 3.218 Thread 0x00007f847000b000 DEOPT PACKING pc=0x00007f846d0bf560 sp=0x00007f84790b1e90
+Event: 3.218 Thread 0x00007f847000b000 DEOPT UNPACKING pc=0x00007f846d039045 sp=0x00007f84790b1db8 mode 2
+Event: 3.812 Executing VM operation: ParallelGCFailedAllocation
+Event: 3.846 Executing VM operation: ParallelGCFailedAllocation done
+Event: 3.861 Thread 0x00007f847000b000 Uncommon trap: trap_request=0xffffffad fr.pc=0x00007f846d0d8738
+Event: 3.861 Thread 0x00007f847000b000 DEOPT PACKING pc=0x00007f846d0d8738 sp=0x00007f84790b2010
+Event: 3.861 Thread 0x00007f847000b000 DEOPT UNPACKING pc=0x00007f846d039045 sp=0x00007f84790b1fb0 mode 2
+Event: 4.018 Thread 0x00007f847000b000 Uncommon trap: trap_request=0xffffffde fr.pc=0x00007f846d08d44c
+Event: 4.018 Thread 0x00007f847000b000 DEOPT PACKING pc=0x00007f846d08d44c sp=0x00007f84790b1d60
+Event: 4.018 Thread 0x00007f847000b000 DEOPT UNPACKING pc=0x00007f846d039045 sp=0x00007f84790b1c90 mode 2
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:05 8923390                            /home/justbe/Programs/java/jdk1.7.0_75/bin/java
+00600000-00601000 rw-p 00000000 08:05 8923390                            /home/justbe/Programs/java/jdk1.7.0_75/bin/java
+020fc000-0211d000 rw-p 00000000 00:00 0                                  [heap]
+bae00000-bc300000 rw-p 00000000 00:00 0 
+bc300000-c0000000 rw-p 00000000 00:00 0 
+c0000000-c2880000 rw-p 00000000 00:00 0 
+c2880000-eaa80000 rw-p 00000000 00:00 0 
+eaa80000-ece80000 rw-p 00000000 00:00 0 
+ece80000-100000000 rw-p 00000000 00:00 0 
+7f842c000000-7f842c021000 rw-p 00000000 00:00 0 
+7f842c021000-7f8430000000 ---p 00000000 00:00 0 
+7f8434000000-7f8434634000 rw-p 00000000 00:00 0 
+7f8434634000-7f8438000000 ---p 00000000 00:00 0 
+7f8438000000-7f8438021000 rw-p 00000000 00:00 0 
+7f8438021000-7f843c000000 ---p 00000000 00:00 0 
+7f843c000000-7f843c021000 rw-p 00000000 00:00 0 
+7f843c021000-7f8440000000 ---p 00000000 00:00 0 
+7f8440000000-7f8440709000 rw-p 00000000 00:00 0 
+7f8440709000-7f8444000000 ---p 00000000 00:00 0 
+7f8444000000-7f8444021000 rw-p 00000000 00:00 0 
+7f8444021000-7f8448000000 ---p 00000000 00:00 0 
+7f8448000000-7f8448021000 rw-p 00000000 00:00 0 
+7f8448021000-7f844c000000 ---p 00000000 00:00 0 
+7f844c000000-7f844c021000 rw-p 00000000 00:00 0 
+7f844c021000-7f8450000000 ---p 00000000 00:00 0 
+7f8454000000-7f8454021000 rw-p 00000000 00:00 0 
+7f8454021000-7f8458000000 ---p 00000000 00:00 0 
+7f8458000000-7f8458021000 rw-p 00000000 00:00 0 
+7f8458021000-7f845c000000 ---p 00000000 00:00 0 
+7f845c000000-7f845c021000 rw-p 00000000 00:00 0 
+7f845c021000-7f8460000000 ---p 00000000 00:00 0 
+7f8462d70000-7f8465000000 rw-p 00000000 00:00 0 
+7f846705d000-7f84674cb000 rw-p 00000000 00:00 0 
+7f84674cb000-7f84674e1000 r-xp 00000000 08:05 7474867                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libnet.so
+7f84674e1000-7f84676e1000 ---p 00016000 08:05 7474867                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libnet.so
+7f84676e1000-7f84676e2000 rw-p 00016000 08:05 7474867                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libnet.so
+7f84676e2000-7f84676f2000 r-xp 00000000 08:05 7474833                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libnio.so
+7f84676f2000-7f84678f2000 ---p 00010000 08:05 7474833                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libnio.so
+7f84678f2000-7f84678f3000 rw-p 00010000 08:05 7474833                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libnio.so
+7f84678f3000-7f84678f4000 ---p 00000000 00:00 0 
+7f84678f4000-7f84679f4000 rw-p 00000000 00:00 0                          [stack:12438]
+7f84679f4000-7f84679f7000 ---p 00000000 00:00 0 
+7f84679f7000-7f8467af5000 rw-p 00000000 00:00 0                          [stack:12437]
+7f8467af5000-7f8467af8000 ---p 00000000 00:00 0 
+7f8467af8000-7f8467bf6000 rw-p 00000000 00:00 0                          [stack:12436]
+7f8467bf6000-7f8467bfb000 r-xp 00000000 08:08 3285722                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f8467bfb000-7f8467dfa000 ---p 00005000 08:08 3285722                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f8467dfa000-7f8467dfb000 r--p 00004000 08:08 3285722                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f8467dfb000-7f8467dfc000 rw-p 00005000 08:08 3285722                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f8467dfc000-7f8467dfe000 r-xp 00000000 08:08 3285711                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f8467dfe000-7f8467ffe000 ---p 00002000 08:08 3285711                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f8467ffe000-7f8467fff000 r--p 00002000 08:08 3285711                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f8467fff000-7f8468000000 rw-p 00003000 08:08 3285711                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f8468000000-7f8468021000 rw-p 00000000 00:00 0 
+7f8468021000-7f846c000000 ---p 00000000 00:00 0 
+7f846c0c2000-7f846c0c5000 ---p 00000000 00:00 0 
+7f846c0c5000-7f846c1c3000 rw-p 00000000 00:00 0                          [stack:12435]
+7f846c1c3000-7f846c1e0000 r-xp 00000000 08:08 3286909                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f846c1e0000-7f846c3e0000 ---p 0001d000 08:08 3286909                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f846c3e0000-7f846c3e1000 r--p 0001d000 08:08 3286909                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f846c3e1000-7f846c3e2000 rw-p 0001e000 08:08 3286909                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f846c3e2000-7f846c515000 r-xp 00000000 08:08 3285707                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f846c515000-7f846c715000 ---p 00133000 08:08 3285707                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f846c715000-7f846c716000 r--p 00133000 08:08 3285707                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f846c716000-7f846c71a000 rw-p 00134000 08:08 3285707                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f846c71a000-7f846c71b000 rw-p 00000000 00:00 0 
+7f846c71b000-7f846c71d000 r-xp 00000000 08:08 3282334                    /usr/lib/jayatana/libjayatanaag.so
+7f846c71d000-7f846c91c000 ---p 00002000 08:08 3282334                    /usr/lib/jayatana/libjayatanaag.so
+7f846c91c000-7f846c91d000 r--p 00001000 08:08 3282334                    /usr/lib/jayatana/libjayatanaag.so
+7f846c91d000-7f846c91e000 rw-p 00002000 08:08 3282334                    /usr/lib/jayatana/libjayatanaag.so
+7f846c91e000-7f846d000000 r--p 00000000 08:08 3284687                    /usr/lib/locale/locale-archive
+7f846d000000-7f846d270000 rwxp 00000000 00:00 0 
+7f846d270000-7f8470353000 rw-p 00000000 00:00 0 
+7f8470353000-7f8474000000 ---p 00000000 00:00 0 
+7f84740b6000-7f84740c4000 r--s 000dc000 08:05 7870126                    /home/justbe/Programs/android-sdk-linux/build-tools/21.0.0/lib/dx.jar
+7f84740c4000-7f84740c7000 ---p 00000000 00:00 0 
+7f84740c7000-7f84741c5000 rw-p 00000000 00:00 0                          [stack:12429]
+7f84741c5000-7f84741c8000 ---p 00000000 00:00 0 
+7f84741c8000-7f84742c6000 rw-p 00000000 00:00 0                          [stack:12415]
+7f84742c6000-7f84742c9000 ---p 00000000 00:00 0 
+7f84742c9000-7f84743c7000 rw-p 00000000 00:00 0                          [stack:12413]
+7f84743c7000-7f84743c8000 ---p 00000000 00:00 0 
+7f84743c8000-7f8475422000 rw-p 00000000 00:00 0                          [stack:12412]
+7f8475422000-7f84755e1000 r--s 039eb000 08:05 7346586                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/rt.jar
+7f84755e1000-7f84758db000 rw-p 00000000 00:00 0 
+7f84758db000-7f84758dc000 ---p 00000000 00:00 0 
+7f84758dc000-7f84759dc000 rw-p 00000000 00:00 0                          [stack:12411]
+7f84759dc000-7f84759dd000 ---p 00000000 00:00 0 
+7f84759dd000-7f8475add000 rw-p 00000000 00:00 0                          [stack:12410]
+7f8475add000-7f8475ade000 ---p 00000000 00:00 0 
+7f8475ade000-7f8475bde000 rw-p 00000000 00:00 0                          [stack:12409]
+7f8475bde000-7f8475bdf000 ---p 00000000 00:00 0 
+7f8475bdf000-7f8475cea000 rw-p 00000000 00:00 0                          [stack:12407]
+7f8475cea000-7f8475d08000 rw-p 00000000 00:00 0 
+7f8475d08000-7f8475d1d000 rw-p 00000000 00:00 0 
+7f8475d1d000-7f8475e5e000 rw-p 00000000 00:00 0 
+7f8475e5e000-7f8475e69000 rw-p 00000000 00:00 0 
+7f8475e69000-7f8475e87000 rw-p 00000000 00:00 0 
+7f8475e87000-7f8475e9c000 rw-p 00000000 00:00 0 
+7f8475e9c000-7f8475fdc000 rw-p 00000000 00:00 0 
+7f8475fdc000-7f8475fef000 rw-p 00000000 00:00 0 
+7f8475fef000-7f8476087000 rw-p 00000000 00:00 0 
+7f8476087000-7f8476088000 rw-p 00000000 00:00 0 
+7f8476088000-7f84760a2000 r-xp 00000000 08:05 7474862                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libzip.so
+7f84760a2000-7f84762a2000 ---p 0001a000 08:05 7474862                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libzip.so
+7f84762a2000-7f84762a3000 rw-p 0001a000 08:05 7474862                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libzip.so
+7f84762a3000-7f84762af000 r-xp 00000000 08:08 1708325                    /lib/x86_64-linux-gnu/libnss_files-2.21.so
+7f84762af000-7f84764ae000 ---p 0000c000 08:08 1708325                    /lib/x86_64-linux-gnu/libnss_files-2.21.so
+7f84764ae000-7f84764af000 r--p 0000b000 08:08 1708325                    /lib/x86_64-linux-gnu/libnss_files-2.21.so
+7f84764af000-7f84764b0000 rw-p 0000c000 08:08 1708325                    /lib/x86_64-linux-gnu/libnss_files-2.21.so
+7f84764b0000-7f84764bb000 r-xp 00000000 08:08 1708335                    /lib/x86_64-linux-gnu/libnss_nis-2.21.so
+7f84764bb000-7f84766ba000 ---p 0000b000 08:08 1708335                    /lib/x86_64-linux-gnu/libnss_nis-2.21.so
+7f84766ba000-7f84766bb000 r--p 0000a000 08:08 1708335                    /lib/x86_64-linux-gnu/libnss_nis-2.21.so
+7f84766bb000-7f84766bc000 rw-p 0000b000 08:08 1708335                    /lib/x86_64-linux-gnu/libnss_nis-2.21.so
+7f84766bc000-7f84766d3000 r-xp 00000000 08:08 1708319                    /lib/x86_64-linux-gnu/libnsl-2.21.so
+7f84766d3000-7f84768d2000 ---p 00017000 08:08 1708319                    /lib/x86_64-linux-gnu/libnsl-2.21.so
+7f84768d2000-7f84768d3000 r--p 00016000 08:08 1708319                    /lib/x86_64-linux-gnu/libnsl-2.21.so
+7f84768d3000-7f84768d4000 rw-p 00017000 08:08 1708319                    /lib/x86_64-linux-gnu/libnsl-2.21.so
+7f84768d4000-7f84768d6000 rw-p 00000000 00:00 0 
+7f84768d6000-7f84768de000 r-xp 00000000 08:08 1708321                    /lib/x86_64-linux-gnu/libnss_compat-2.21.so
+7f84768de000-7f8476add000 ---p 00008000 08:08 1708321                    /lib/x86_64-linux-gnu/libnss_compat-2.21.so
+7f8476add000-7f8476ade000 r--p 00007000 08:08 1708321                    /lib/x86_64-linux-gnu/libnss_compat-2.21.so
+7f8476ade000-7f8476adf000 rw-p 00008000 08:08 1708321                    /lib/x86_64-linux-gnu/libnss_compat-2.21.so
+7f8476adf000-7f8476ae9000 r-xp 00000000 08:05 7474875                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libinstrument.so
+7f8476ae9000-7f8476ce8000 ---p 0000a000 08:05 7474875                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libinstrument.so
+7f8476ce8000-7f8476ce9000 rw-p 00009000 08:05 7474875                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libinstrument.so
+7f8476ce9000-7f8476d12000 r-xp 00000000 08:05 7474828                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libjava.so
+7f8476d12000-7f8476f12000 ---p 00029000 08:05 7474828                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libjava.so
+7f8476f12000-7f8476f14000 rw-p 00029000 08:05 7474828                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libjava.so
+7f8476f14000-7f8476f21000 r-xp 00000000 08:05 7474855                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libverify.so
+7f8476f21000-7f8477120000 ---p 0000d000 08:05 7474855                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libverify.so
+7f8477120000-7f8477122000 rw-p 0000c000 08:05 7474855                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/libverify.so
+7f8477122000-7f8477129000 r-xp 00000000 08:08 1708380                    /lib/x86_64-linux-gnu/librt-2.21.so
+7f8477129000-7f8477328000 ---p 00007000 08:08 1708380                    /lib/x86_64-linux-gnu/librt-2.21.so
+7f8477328000-7f8477329000 r--p 00006000 08:08 1708380                    /lib/x86_64-linux-gnu/librt-2.21.so
+7f8477329000-7f847732a000 rw-p 00007000 08:08 1708380                    /lib/x86_64-linux-gnu/librt-2.21.so
+7f847732a000-7f8477431000 r-xp 00000000 08:08 1708298                    /lib/x86_64-linux-gnu/libm-2.21.so
+7f8477431000-7f8477630000 ---p 00107000 08:08 1708298                    /lib/x86_64-linux-gnu/libm-2.21.so
+7f8477630000-7f8477631000 r--p 00106000 08:08 1708298                    /lib/x86_64-linux-gnu/libm-2.21.so
+7f8477631000-7f8477632000 rw-p 00107000 08:08 1708298                    /lib/x86_64-linux-gnu/libm-2.21.so
+7f8477632000-7f84781a5000 r-xp 00000000 08:05 7474881                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/server/libjvm.so
+7f84781a5000-7f84783a5000 ---p 00b73000 08:05 7474881                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/server/libjvm.so
+7f84783a5000-7f8478469000 rw-p 00b73000 08:05 7474881                    /home/justbe/Programs/java/jdk1.7.0_75/jre/lib/amd64/server/libjvm.so
+7f8478469000-7f84784aa000 rw-p 00000000 00:00 0 
+7f84784aa000-7f847866a000 r-xp 00000000 08:08 1708239                    /lib/x86_64-linux-gnu/libc-2.21.so
+7f847866a000-7f847886a000 ---p 001c0000 08:08 1708239                    /lib/x86_64-linux-gnu/libc-2.21.so
+7f847886a000-7f847886e000 r--p 001c0000 08:08 1708239                    /lib/x86_64-linux-gnu/libc-2.21.so
+7f847886e000-7f8478870000 rw-p 001c4000 08:08 1708239                    /lib/x86_64-linux-gnu/libc-2.21.so
+7f8478870000-7f8478874000 rw-p 00000000 00:00 0 
+7f8478874000-7f8478877000 r-xp 00000000 08:08 1708256                    /lib/x86_64-linux-gnu/libdl-2.21.so
+7f8478877000-7f8478a76000 ---p 00003000 08:08 1708256                    /lib/x86_64-linux-gnu/libdl-2.21.so
+7f8478a76000-7f8478a77000 r--p 00002000 08:08 1708256                    /lib/x86_64-linux-gnu/libdl-2.21.so
+7f8478a77000-7f8478a78000 rw-p 00003000 08:08 1708256                    /lib/x86_64-linux-gnu/libdl-2.21.so
+7f8478a78000-7f8478a8e000 r-xp 00000000 08:05 8923360                    /home/justbe/Programs/java/jdk1.7.0_75/lib/amd64/jli/libjli.so
+7f8478a8e000-7f8478c8e000 ---p 00016000 08:05 8923360                    /home/justbe/Programs/java/jdk1.7.0_75/lib/amd64/jli/libjli.so
+7f8478c8e000-7f8478c8f000 rw-p 00016000 08:05 8923360                    /home/justbe/Programs/java/jdk1.7.0_75/lib/amd64/jli/libjli.so
+7f8478c8f000-7f8478ca7000 r-xp 00000000 08:08 1708372                    /lib/x86_64-linux-gnu/libpthread-2.21.so
+7f8478ca7000-7f8478ea7000 ---p 00018000 08:08 1708372                    /lib/x86_64-linux-gnu/libpthread-2.21.so
+7f8478ea7000-7f8478ea8000 r--p 00018000 08:08 1708372                    /lib/x86_64-linux-gnu/libpthread-2.21.so
+7f8478ea8000-7f8478ea9000 rw-p 00019000 08:08 1708372                    /lib/x86_64-linux-gnu/libpthread-2.21.so
+7f8478ea9000-7f8478ead000 rw-p 00000000 00:00 0 
+7f8478ead000-7f8478ed1000 r-xp 00000000 08:08 1708211                    /lib/x86_64-linux-gnu/ld-2.21.so
+7f8478edd000-7f8478efd000 rw-p 00000000 00:00 0 
+7f8478efd000-7f8478fb3000 rw-p 00000000 00:00 0 
+7f8478fb3000-7f8478fb6000 ---p 00000000 00:00 0 
+7f8478fb6000-7f84790b8000 rw-p 00000000 00:00 0                          [stack:12404]
+7f84790bb000-7f84790bd000 rw-p 00000000 00:00 0 
+7f84790bd000-7f84790c3000 r--s 00022000 08:05 9307296                    /home/justbe/justbe_workspace/source_code/WeatherForecast/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.8.0/jars/classes.jar
+7f84790c3000-7f84790c4000 r--s 00000000 08:08 3675181                    /usr/share/java/jayatanaag.jar
+7f84790c4000-7f84790cc000 rw-s 00000000 08:07 70                         /tmp/hsperfdata_justbe/12402
+7f84790cc000-7f84790cd000 rw-p 00000000 00:00 0 
+7f84790cd000-7f84790ce000 r--p 00000000 00:00 0 
+7f84790ce000-7f84790d0000 rw-p 00000000 00:00 0 
+7f84790d0000-7f84790d1000 r--p 00023000 08:08 1708211                    /lib/x86_64-linux-gnu/ld-2.21.so
+7f84790d1000-7f84790d2000 rw-p 00024000 08:08 1708211                    /lib/x86_64-linux-gnu/ld-2.21.so
+7f84790d2000-7f84790d3000 rw-p 00000000 00:00 0 
+7ffd5559f000-7ffd555c0000 rw-p 00000000 00:00 0                          [stack]
+7ffd555fb000-7ffd555fd000 r--p 00000000 00:00 0                          [vvar]
+7ffd555fd000-7ffd555ff000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -javaagent:/usr/share/java/jayatanaag.jar -Xmx1024M -Dfile.encoding=UTF-8 -Duser.country=IN -Duser.language=en -Duser.variant 
+java_command: com.android.dx.command.Main --dex --output /home/justbe/justbe_workspace/source_code/WeatherForecast/app/build/intermediates/pre-dexed/debug/classes-3aed4a304a437b1ea2b3387b57da86724491818a.jar /home/justbe/justbe_workspace/source_code/WeatherForecast/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.8.0/jars/classes.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_TOOL_OPTIONS=-javaagent:/usr/share/java/jayatanaag.jar 
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+LD_LIBRARY_PATH=/home/justbe/Programs/android-studio/bin:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x9a21f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x9a21f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x81ba40], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x81ba40], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x81ba40], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x81ba40], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x81d240], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x81e360], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x81e360], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x81e360], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x81e360], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:jessie/sid
+
+uname:Linux 3.19.0-26-generic #28-Ubuntu SMP Tue Aug 11 14:16:32 UTC 2015 x86_64
+libc:glibc 2.21 NPTL 2.21 
+rlimit: STACK 8192k, CORE 0k, NPROC 15570, NOFILE 65536, AS infinity
+load average:2.90 0.90 0.67
+
+/proc/meminfo:
+MemTotal:        4008400 kB
+MemFree:          145252 kB
+MemAvailable:     446068 kB
+Buffers:           58888 kB
+Cached:           727416 kB
+SwapCached:        10220 kB
+Active:          2632300 kB
+Inactive:        1065568 kB
+Active(anon):    2335012 kB
+Inactive(anon):   910732 kB
+Active(file):     297288 kB
+Inactive(file):   154836 kB
+Unevictable:          48 kB
+Mlocked:              48 kB
+SwapTotal:      15624188 kB
+SwapFree:       15425720 kB
+Dirty:             25948 kB
+Writeback:             0 kB
+AnonPages:       2907036 kB
+Mapped:           351436 kB
+Shmem:            334044 kB
+Slab:              68476 kB
+SReclaimable:      35268 kB
+SUnreclaim:        33208 kB
+KernelStack:       11168 kB
+PageTables:        45996 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    17628388 kB
+Committed_AS:    8417152 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      546176 kB
+VmallocChunk:   34359186704 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1429504 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      145612 kB
+DirectMap2M:     4009984 kB
+
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, tsc
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Core(TM)2 Quad CPU    Q8400  @ 2.66GHz
+stepping	: 10
+microcode	: 0xa0b
+cpu MHz		: 2664.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bugs		:
+bogomips	: 5333.76
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Core(TM)2 Quad CPU    Q8400  @ 2.66GHz
+stepping	: 10
+microcode	: 0xa0b
+cpu MHz		: 2664.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bugs		:
+bogomips	: 5333.76
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Core(TM)2 Quad CPU    Q8400  @ 2.66GHz
+stepping	: 10
+microcode	: 0xa0b
+cpu MHz		: 2664.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bugs		:
+bogomips	: 5333.76
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Core(TM)2 Quad CPU    Q8400  @ 2.66GHz
+stepping	: 10
+microcode	: 0xa0b
+cpu MHz		: 2664.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bugs		:
+bogomips	: 5333.76
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 4008400k(145252k free), swap 15624188k(15425720k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.75-b04) for linux-amd64 JRE (1.7.0_75-b13), built on Dec 18 2014 16:45:18 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Fri Sep  4 14:21:59 2015
+elapsed time: 4 seconds
+
