@@ -32,7 +32,7 @@ public class CurrentCityForecastActivity extends Activity implements LocationLis
     private ListView lv;
     protected LocationManager locationManager;
     protected boolean gps_enabled, network_enabled;
-    QueryConstructor queryConstructor;
+    private QueryConstructor queryConstructor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
