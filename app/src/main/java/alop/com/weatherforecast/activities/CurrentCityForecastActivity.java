@@ -40,7 +40,8 @@ public class CurrentCityForecastActivity extends Activity implements LocationLis
         setContentView(R.layout.current_city_forecast_activity);
         Location location;
         location = getCurrentLocation();
-        String query = Constants.QUERY_FIRST_PART + "lat=" + location.getLatitude() + "&lon=" + location.getLongitude() + "&cnt=" + Constants.COUNT + "&units=" + Constants.UNIT + "&APPID=" + Constants.APP_ID;
+        queryConstructor = new QueryConstructor();
+        String query = queryConstructor.getQuery(location);
         // call AsynTask to perform network operation on separate thread
         lv = (ListView) findViewById(R.id.lv);
         new RequestHandlerTask(CurrentCityForecastActivity.this, lv, null).execute(query);

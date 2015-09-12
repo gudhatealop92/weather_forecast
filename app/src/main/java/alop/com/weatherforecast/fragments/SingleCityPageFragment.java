@@ -42,7 +42,8 @@ public class SingleCityPageFragment extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_multiple_city_wf, container, false);
-        final String query = Constants.QUERY_FIRST_PART + "q=" + getCityName().replaceAll(" ", "%20") + "&cnt=" + Constants.COUNT + "&units=" + Constants.UNIT + "&APPID=" + Constants.APP_ID;
+        queryConstructor = new QueryConstructor();
+        String query = queryConstructor.getQuery(cityName);
         // call AsynTask to perform network operation on separate thread
         lv = (ListView) view.findViewById(R.id.lvMultipleCities);
         new RequestHandlerTask(getActivity(), lv, view).execute(query);
