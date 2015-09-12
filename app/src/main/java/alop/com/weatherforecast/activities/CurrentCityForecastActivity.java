@@ -14,7 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import alop.com.weatherforecast.QueryConstructor;
+import alop.com.weatherforecast.valueobjects.QueryConstructor;
 import alop.com.weatherforecast.system.Constants;
 import alop.com.weatherforecast.R;
 import alop.com.weatherforecast.system.RequestHandlerTask;

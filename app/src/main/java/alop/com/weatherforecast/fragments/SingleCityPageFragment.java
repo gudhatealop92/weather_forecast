@@ -6,11 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import java.util.Calendar;
-
-import alop.com.weatherforecast.QueryConstructor;
+import alop.com.weatherforecast.valueobjects.QueryConstructor;
 import alop.com.weatherforecast.R;
-import alop.com.weatherforecast.system.Constants;
 import alop.com.weatherforecast.system.RequestHandlerTask;
 
 /**

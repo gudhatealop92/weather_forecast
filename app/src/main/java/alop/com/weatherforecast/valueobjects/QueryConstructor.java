@@ -1,4 +1,4 @@
-package alop.com.weatherforecast;
+package alop.com.weatherforecast.valueobjects;
 
 import android.location.Location;
 
