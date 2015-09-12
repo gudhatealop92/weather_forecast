@@ -14,10 +14,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import alop.com.weatherforecast.valueobjects.QueryConstructor;
-import alop.com.weatherforecast.system.Constants;
 import alop.com.weatherforecast.R;
+import alop.com.weatherforecast.system.Constants;
 import alop.com.weatherforecast.system.RequestHandlerTask;
+import alop.com.weatherforecast.valueobjects.QueryConstructor;
 
 /**
  * Created by Alop Gudhate on 8/25/15.
@@ -40,7 +40,7 @@ public class CurrentCityForecastActivity extends Activity implements LocationLis
         setContentView(R.layout.current_city_forecast_activity);
         Location location;
         location = getCurrentLocation();
-        String query = queryConstructor.getQuery(location);
+        String query = Constants.QUERY_FIRST_PART + "lat=" + location.getLatitude() + "&lon=" + location.getLongitude() + "&cnt=" + Constants.COUNT + "&units=" + Constants.UNIT + "&APPID=" + Constants.APP_ID;
         // call AsynTask to perform network operation on separate thread
         lv = (ListView) findViewById(R.id.lv);
         new RequestHandlerTask(CurrentCityForecastActivity.this, lv, null).execute(query);
@@ -59,8 +59,6 @@ public class CurrentCityForecastActivity extends Activity implements LocationLis
             }
         });
     }
-
-
 
 
     @Override

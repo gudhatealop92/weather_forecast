@@ -38,7 +38,7 @@ public class WeatherListAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return result == null ? 0 :result.size();
+        return result == null ? 0 : result.size();
     }
 
     @Override
@@ -80,7 +80,7 @@ public class WeatherListAdapter extends BaseAdapter {
             holder.relativeLayout.setBackgroundResource(R.drawable.light_rain_image4);
             Drawable background = holder.relativeLayout.getBackground();
             background.setAlpha(90);
-        } else if (desc.equalsIgnoreCase("heavy intensity rain")) {
+        } else if (desc.equalsIgnoreCase("heavy intensity rain") || desc.equalsIgnoreCase("very heavy rain")) {
             holder.relativeLayout.setBackgroundResource(R.drawable.heavy_rain_image3);
             Drawable background = holder.relativeLayout.getBackground();
             background.setAlpha(90);

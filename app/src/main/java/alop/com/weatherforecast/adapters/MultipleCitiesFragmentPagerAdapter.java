@@ -1,7 +1,7 @@
 package alop.com.weatherforecast.adapters;
 
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
 
 import alop.com.weatherforecast.fragments.SingleCityPageFragment;
 

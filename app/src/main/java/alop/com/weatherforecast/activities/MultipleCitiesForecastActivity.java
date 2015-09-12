@@ -11,9 +11,9 @@ import android.widget.EditText;
 
 import com.astuetz.PagerSlidingTabStrip;
 
-import alop.com.weatherforecast.system.Constants;
-import alop.com.weatherforecast.adapters.MultipleCitiesFragmentPagerAdapter;
 import alop.com.weatherforecast.R;
+import alop.com.weatherforecast.adapters.MultipleCitiesFragmentPagerAdapter;
+import alop.com.weatherforecast.system.Constants;
 
 /**
  * Created by justbe on 4/9/15.

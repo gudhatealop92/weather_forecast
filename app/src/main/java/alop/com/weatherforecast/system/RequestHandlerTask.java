@@ -43,7 +43,7 @@ public class RequestHandlerTask extends AsyncTask<String, Void, String> {
 
     @Override
     protected String doInBackground(String... urls) {
-        String abc=urls[0];
+        String abc = urls[0];
         return getResponse(urls[0]);
     }
 
@@ -61,11 +61,11 @@ public class RequestHandlerTask extends AsyncTask<String, Void, String> {
             throw new RuntimeException(e);
         }
 
-        if (cwc.getCity()==null) {
+        if (cwc.getCity() == null) {
             TextView tv = (TextView) view.findViewById(R.id.emptyElement);
             lv.setAdapter(new WeatherListAdapter(context, weatherDataList));
             lv.setEmptyView(tv);
-        } else{
+        } else {
             weatherDataList = forecastDataListConstructor.getDataList(cwc);
             lv.setAdapter(new WeatherListAdapter(context, weatherDataList));
         }
