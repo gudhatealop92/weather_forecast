@@ -1,4 +1,4 @@
-package alop.com.weatherforecast;
+package alop.com.weatherforecast.valueobjects;
 
 /**
  * Created by Alop Gudhate on 8/25/15.

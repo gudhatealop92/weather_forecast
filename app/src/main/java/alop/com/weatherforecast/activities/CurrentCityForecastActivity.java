@@ -1,4 +1,4 @@
-package alop.com.weatherforecast;
+package alop.com.weatherforecast.activities;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,21 +14,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
+import alop.com.weatherforecast.QueryConstructor;
+import alop.com.weatherforecast.system.Constants;
+import alop.com.weatherforecast.R;
+import alop.com.weatherforecast.system.RequestHandlerTask;
 
 /**
  * Created by Alop Gudhate on 8/25/15.
@@ -44,6 +32,7 @@ public class CurrentCityForecastActivity extends Activity implements LocationLis
     private ListView lv;
     protected LocationManager locationManager;
     protected boolean gps_enabled, network_enabled;
+    QueryConstructor queryConstructor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +40,7 @@ public class CurrentCityForecastActivity extends Activity implements LocationLis
         setContentView(R.layout.current_city_forecast_activity);
         Location location;
         location = getCurrentLocation();
-        final String query = Constants.QUERY_FIRST_PART + "lat=" + location.getLatitude() + "&lon=" + location.getLongitude() + "&cnt=" + Constants.COUNT + "&units=" + Constants.UNIT + "&APPID=" + Constants.APP_ID;
+        String query = queryConstructor.getQuery(location);
         // call AsynTask to perform network operation on separate thread
         lv = (ListView) findViewById(R.id.lv);
         new RequestHandlerTask(CurrentCityForecastActivity.this, lv, null).execute(query);

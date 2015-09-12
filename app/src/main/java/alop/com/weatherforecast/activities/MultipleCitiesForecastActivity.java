@@ -1,4 +1,4 @@
-package alop.com.weatherforecast;
+package alop.com.weatherforecast.activities;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -10,6 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.astuetz.PagerSlidingTabStrip;
+
+import alop.com.weatherforecast.system.Constants;
+import alop.com.weatherforecast.adapters.MultipleCitiesFragmentPagerAdapter;
+import alop.com.weatherforecast.R;
 
 /**
  * Created by justbe on 4/9/15.

@@ -1,6 +1,5 @@
-package alop.com.weatherforecast;
+package alop.com.weatherforecast.adapters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
@@ -12,6 +11,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import alop.com.weatherforecast.R;
+import alop.com.weatherforecast.fragments.SingleCityPageFragment;
+import alop.com.weatherforecast.valueobjects.WeatherData;
 
 /**
  * Created by Alop Gudhate on 8/25/15.

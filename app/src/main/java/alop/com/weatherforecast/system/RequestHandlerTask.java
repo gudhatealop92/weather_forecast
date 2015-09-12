@@ -1,6 +1,5 @@
-package alop.com.weatherforecast;
+package alop.com.weatherforecast.system;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -20,6 +19,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
+import alop.com.weatherforecast.R;
+import alop.com.weatherforecast.adapters.WeatherListAdapter;
+import alop.com.weatherforecast.valueobjects.CityWeatherCondition;
+import alop.com.weatherforecast.valueobjects.ForecastDataListConstructor;
+import alop.com.weatherforecast.valueobjects.WeatherData;
 
 /**
  * Created by justbe on 10/9/15.

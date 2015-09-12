@@ -1,7 +1,9 @@
-package alop.com.weatherforecast;
+package alop.com.weatherforecast.valueobjects;
 
-import java.util.Collection;
 import java.util.List;
+
+import alop.com.weatherforecast.valueobjects.CityTemp;
+import alop.com.weatherforecast.valueobjects.CityWeather;
 
 /**
  * Created by Alop Gudhate on 8/25/15.

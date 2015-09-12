@@ -1,4 +1,4 @@
-package alop.com.weatherforecast;
+package alop.com.weatherforecast.valueobjects;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import java.util.List;
 * contains all the data received from json response
 */
 public class CityWeatherCondition {
-    private  City city;
+    private City city;
     private String cod;
     private String message;
     private int cnt;

@@ -1,9 +1,11 @@
-package alop.com.weatherforecast;
+package alop.com.weatherforecast.valueobjects;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+
+import alop.com.weatherforecast.system.Constants;
 
 /**
  * Created by justbe on 10/9/15.

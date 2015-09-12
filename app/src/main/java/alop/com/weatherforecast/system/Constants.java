@@ -1,4 +1,4 @@
-package alop.com.weatherforecast;
+package alop.com.weatherforecast.system;
 
 /**
  * Created by justbe on 10/9/15.
